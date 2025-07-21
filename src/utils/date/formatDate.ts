@@ -12,18 +12,18 @@ export function formatDate(inputDate: string, t: any) {
   }
 
   const months = [
-    t("jan"),
-    t("feb"),
-    t("mar"),
-    t("apr"),
-    t("may"),
-    t("jun"),
-    t("jul"),
-    t("aug"),
-    t("sep"),
-    t("oct"),
-    t("nov"),
-    t("dec"),
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
   ];
 
   const month = months[date.getUTCMonth()];

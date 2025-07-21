@@ -2,7 +2,6 @@
 export function formatDateByHours(
   inputDate: string,
   format: "text" | "date" | "hh:mm",
-  t: any,
   isUtc: boolean | undefined = false
 ) {
   if (!inputDate) return "~";
@@ -22,18 +21,18 @@ export function formatDateByHours(
   const getMinutes = isUtc ? date.getUTCMinutes() : date.getMinutes();
 
   const months = [
-    t("jan"),
-    t("feb"),
-    t("mar"),
-    t("apr"),
-    t("may"),
-    t("jun"),
-    t("jul"),
-    t("aug"),
-    t("sep"),
-    t("oct"),
-    t("nov"),
-    t("dec"),
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
   ];
 
   const month = months[getMonth];
@@ -44,13 +43,13 @@ export function formatDateByHours(
   const hours = hours24.toString().padStart(2, "0");
   const minutes = getMinutes.toString().padStart(2, "0");
 
-  const period = hours24 >= 12 ? t("pm") : t("am");
+  const period = hours24 >= 12 ? "pm" : "am";
   const hours12 = hours24 % 12 || 12;
 
   if (format === "date") {
     return `${month} ${day}, ${year} ${hours}:${minutes}`;
   } else if (format === "text") {
-    return `${month} ${day} ${t("at")} ${hours12}:${minutes} ${period}`;
+    return `${month} ${day} ${"at"} ${hours12}:${minutes} ${period}`;
   } else if (format === "hh:mm") {
     return `${hours}:${minutes}`;
   }
