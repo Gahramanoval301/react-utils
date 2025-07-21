@@ -102,7 +102,8 @@ yarn add @lemanghrmnva/react-utils
 - ```generateCaptcha(length?: number): string```
     --> Generates a random alphanumeric captcha string.
 
-     ### ⚠️  If you face any version or peer dependency issues, install the package with:
+
+### ⚠️  If you face any version or peer dependency issues, install the package with:
 
 ```
 npm install @lemanghrmnva/react-utils --legacy-peer-deps
